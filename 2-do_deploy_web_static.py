@@ -14,7 +14,7 @@ def do_deploy(archive_path):
 
     try:
         archive_name = archive_path[9:]
-        archive_name_no_extension = archive_name[:4]
+        archive_name_no_extension = archive_name[:-4]
 
         put(archive_path, '/tmp/' + archive_name)
         run('mkdir -p /data/web_static/releases/' + archive_name_no_extension)
