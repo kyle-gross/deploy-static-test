@@ -20,7 +20,7 @@ sudo echo "Hello" | sudo tee /data/web_static/releases/test/index.html
 sudo ln -fs /data/web_static/releases/test /data/web_static/current
 
 # Change ownership
-sudo chown -hR ubuntu:ubuntu /data
+sudo chown -R ubuntu:ubuntu /data
 
 # Edit nginx config file
 searchStr="^\tlocation / {"
