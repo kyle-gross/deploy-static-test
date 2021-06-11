@@ -24,11 +24,7 @@ sudo chown -R ubuntu:ubuntu /data/
 
 # Edit nginx config file
 searchStr="^\tlocation / {"
-replaceStr="\
-\tlocation /hbnb_static/ {\n\
-\t\talias /data/web_static/current/;\n\
-\t}\n\n\
-\tlocation / {"
+replaceStr="\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t}\n\n\tlocation / {"
 sudo sed -i "s@$searchStr@$replaceStr@" /etc/nginx/sites-available/default
 
 sudo service nginx restart
