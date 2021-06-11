@@ -38,7 +38,7 @@ def do_deploy(archive_path):
             ' --strip-components=1')
         run('rm -rf /tmp/' + archive_name)
         run('rm -rf /data/web_static/current')
-        run('sudo ln -sfn /data/web_static/releases/' +
+        run('sudo ln -sf /data/web_static/releases/' +
             archive_name_no_extension +
             ' /data/web_static/current')
 
