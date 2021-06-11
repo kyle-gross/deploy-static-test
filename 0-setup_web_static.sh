@@ -10,17 +10,17 @@ sudo apt-get -y install nginx
 sudo service nginx start
 
 # Create paths
-sudo mkdir -p /data/web_static/releases/test
-sudo mkdir -p /data/web_static/shared
+sudo mkdir -p /data/web_static/releases/test/
+sudo mkdir -p /data/web_static/shared/
 
 # Create fake HTML index file
 sudo echo "Hello" | sudo tee /data/web_static/releases/test/index.html
 
 # Create symbolic link
-sudo ln -fs /data/web_static/releases/test /data/web_static/current
+sudo ln -fs /data/web_static/releases/test/ /data/web_static/current
 
 # Change ownership
-sudo chown -R ubuntu:ubuntu /data
+sudo chown -R ubuntu:ubuntu /data/
 
 # Edit nginx config file
 searchStr="^\tlocation / {"
